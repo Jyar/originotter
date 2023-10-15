@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string | undefined;
+  list?: string[];
+  href?: string;
+}
+
+const { href = "#", title, list = [] } = Astro.props;
+---
+
+<li class="link-card">
+  <a href={href}>
+    {title}
+    <ul class="link-details">
+      {
+        list
+          .filter((item) => item && item !== "")
+          .map((item) => <li>{item}</li>)
+      }
+    </ul>
+  </a>
+</li>
+<style>
+  .link-card {
+    color: white;
+    display: flex;
+    padding: 1px;
+    background-color: #23262d;
+    background-image: none;
+    border-radius: 7px;
+    background-position: 100%;
+    padding: 1rem;
+  }
+  .link-details {
+    color: white;
+    list-style: circle;
+    padding-left: 2rem;
+  }
+</style>

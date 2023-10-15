@@ -4,43 +4,19 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Origi">
-  <main>
-    <section>
-      <h1>Welcome to <span class="text-gradient">Origi</span></h1>
-      <p class="instructions">
-        Welcome this is a list of resources that I have collected over the
-        years. Google and chatgpt are great resource but I think have a central
-        hub for a specific niches would be a great resource for beginners!
-      </p>
-    </section>
-    <section>
-      <ul role="list" class="link-card-grid">
-        <Card
-          href="/topics/websites"
-          title="Explore some websites"
-          body="explore a list of websites"
-        />
-        <!-- <Card
-          href="/topics/ai"
-          title="AI"
-          body="Supercharge your project with new frameworks and libraries."
-        /> -->
-        <!-- <Card
-          href="/topics/3d"
-          title="3D modeling"
-          body="Explore a galaxy of community-built starter themes."
-        /> -->
-        <!-- <Card
-          href="/topics/communities"
-          title="Communities"
-          body="devX, infoq, etc"
-        /> -->
-      </ul>
-    </section>
-  </main>
+  <slot />
 </Layout>
 
 <style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
   body {
     margin: unset;
     height: auto;
@@ -65,6 +41,20 @@ import Card from "../components/Card.astro";
     width: 220px;
     height: auto;
     z-index: -1;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
   }
   .instructions {
     margin-bottom: 2rem;

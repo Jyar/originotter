@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
+import Topics from "../_topics.astro";
+import MasonryGrid from "../../components/MasonryGrid.astro";
+---
+
+<Topics>
+  <main>
+    <section class="header">
+      <h2>
+        Explore some cool<span class="text-gradient"> Websites</span>
+      </h2>
+    </section>
+    <section>
+      <MasonryGrid title="3D Development" />
+    </section>
+  </main>
+</Topics>
+
+<style>
+  .header {
+    padding: 2rem;
+  }
+</style>

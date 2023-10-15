@@ -1,0 +1,297 @@
+---
+import LinkCard from "./LinkCard.astro";
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const list = [
+  {
+    title: "siteright.co",
+    details: ["sms automation"],
+    type: "ai",
+  },
+  {
+    title: "thehiveindex.com",
+    details: ["communities"],
+    type: "communities",
+  },
+  {
+    title: "thehiveindex.com",
+    details: ["communities"],
+    type: "communities",
+  },
+  {
+    title: "phantombuster.com",
+    details: ["website scraping made easy"],
+    type: "tool",
+  },
+  {
+    title: "makemydrivefun.com",
+    details: ["travel"],
+    type: "travel",
+    meta: "fun",
+  },
+  {
+    title: "worldpackers.com",
+    details: ["travel"],
+    type: "travel",
+  },
+  {
+    title: "findaspring.com",
+    details: ["thirsty?"],
+    type: "buschcraft",
+  },
+  {
+    title: "mcdonaldland.info",
+    details: ["planning"],
+    type: "team planning",
+  },
+  {
+    title: "app daily dev",
+    href: "https://app.daily.dev/onboarding",
+    details: ["developer information"],
+    type: "software development",
+  },
+  {
+    title: "class central",
+    href: "https://classcentral.com",
+    details: ["class central.com"],
+    type: "classes",
+  },
+  {
+    title: "exploding topics",
+    href: "https://explodingtopics.com/",
+    details: ["trending topics"],
+    type: "trending topics",
+  },
+  {
+    title: "algorithm visualizer",
+    href: "https://algorithm-visualizer.org/",
+    details: ["algorithms"],
+    type: "algorithms",
+  },
+  {
+    title: "caktus.ai",
+    href: "https://caktus.ai/",
+    details: ["ai student helper"],
+    type: "ai",
+  },
+  {
+    title: "acquire",
+    href: "https://acquire.com/",
+    details: ["buying businesses"],
+    type: "buying businesses",
+  },
+  {
+    title: "roadmap",
+    href: "https://roadmap.sh/",
+    details: ["roadmaps for software development"],
+    type: "roadmaps for software development",
+  },
+  {
+    title: "",
+    href: "https://www.useblackbox.io",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://madewithwebassembly.com/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://rocket.rs/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://docusaurus.io/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://docs.rs/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://github.com/codecrafters-io/build-your-own-x",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://radixweb.com/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://robertsrules.com/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://www.fast.ai/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://www.propstream.com/",
+    details: ["real estate"],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://videoglancer.online/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://www.devpages.io/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "https://ahrefs.com/",
+    details: ["tools"],
+    type: "seo",
+  },
+  {
+    title: "",
+    href: "http://vlib.org/",
+    details: [""],
+    type: "",
+  },
+  {
+    title: "",
+    href: "",
+    details: [""],
+    type: "",
+  },
+];
+---
+
+<section class="p-8">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="grid gap-4">
+      <div class="link">
+        <LinkCard title={list[0].title} list={list[0].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[1].title} list={list[1].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[2].title} list={list[2].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
+            alt=""
+          /> -->
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div class="link">
+        <LinkCard title={list[3].title} list={list[3].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[4].title} list={list[4].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[5].title} list={list[5].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
+            alt=""
+          /> -->
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div class="link">
+        <LinkCard title={list[6].title} list={list[6].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[7].title} list={list[7].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[8].title} list={list[8].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+            alt=""
+          /> -->
+      </div>
+    </div>
+    <div class="grid gap-4">
+      <div class="link">
+        <LinkCard title={list[9].title} list={list[9].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[10].title} list={list[10].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+            alt=""
+          /> -->
+      </div>
+      <div class="link">
+        <LinkCard title={list[11].title} list={list[11].details} />
+        <!-- <img
+            class="h-auto max-w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
+            alt=""
+          /> -->
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .link {
+  }
+</style>
