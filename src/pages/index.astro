@@ -1,6 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Testimonial from "../components/Testimonial.astro";
+import Carousel from "../components/Carousel.astro";
+import Timeline from "../components/Timeline.astro";
+import JumbotronOne from "../components/JumbotronOne.astro";
 ---
 
 <Layout title="Welcome to Origi">
@@ -13,13 +17,8 @@ import Card from "../components/Card.astro";
         hub for a specific niches would be a great resource for beginners!
       </p>
     </section>
-    <section>
+    <section class="flex flex-col gap-8">
       <ul role="list" class="link-card-grid">
-        <Card
-          href="/topics/websites"
-          title="Explore some websites"
-          body="explore a list of websites"
-        />
         <!-- <Card
           href="/topics/ai"
           title="AI"
@@ -36,6 +35,11 @@ import Card from "../components/Card.astro";
           body="devX, infoq, etc"
         /> -->
       </ul>
+      {false ?? <Testimonial />}
+      <Timeline />
+      <div class="flex justify-center">
+        <JumbotronOne />
+      </div>
     </section>
   </main>
 </Layout>
@@ -51,10 +55,9 @@ import Card from "../components/Card.astro";
   main {
     margin: auto;
     padding: 1rem;
-    width: 800px;
+    width: 75%;
     max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.6;
   }
   .astro-a {
@@ -73,6 +76,7 @@ import Card from "../components/Card.astro";
       rgba(var(--accent-dark), 66%),
       rgba(var(--accent-dark), 33%)
     );
+    font-size: 1.5rem;
     padding: 1.5rem;
     border-radius: 8px;
   }

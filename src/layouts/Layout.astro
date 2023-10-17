@@ -9,8 +9,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
+<html lang="en" class="bg-white dark:bg-gray-900 text-black dark:text-white">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -21,6 +20,10 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot />
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+    ></script>
   </body>
   <footer>
     <section>this is the footer</section>
@@ -40,8 +43,15 @@ const { title } = Astro.props;
   }
   html {
     font-family: "Nunito", system-ui, sans-serif;
-    background: #13151a;
     background-size: 224px;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
   }
   code {
     font-family:
@@ -63,12 +73,11 @@ const { title } = Astro.props;
 
   footer > section {
     padding: 1rem;
-    color: white;
     justify-content: center;
     display: flex;
     text-align: center;
     width: 100%;
-    border: white 1px solid;
+    border: 1px solid;
     border-style: solid none none none;
   }
   h2 {
@@ -76,8 +85,6 @@ const { title } = Astro.props;
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin-bottom: 1em;
-    color: white;
   }
   .text-gradient {
     background-image: var(--accent-gradient);
