@@ -10,11 +10,12 @@ import JumbotronOne from "../components/JumbotronOne.astro";
 <Layout title="Welcome to Origi">
   <main>
     <section>
-      <h1>Welcome to <span class="text-gradient">Origi</span></h1>
+      <h1>Welcome to <span class="text-gradient">Origin Otter</span></h1>
       <p class="instructions">
-        Welcome this is a list of resources that I have collected over the
-        years. Google and chatgpt are great resource but I think have a central
-        hub for a specific niches would be a great resource for beginners!
+        Hello, here you can find a list of resources that I have collected over
+        the years. Google and chatgpt are great resource but I think having a
+        central hub would be a great resource for beginners! You can also find a
+        list of applications made by me.
       </p>
     </section>
     <section class="flex flex-col gap-8">
@@ -36,10 +37,20 @@ import JumbotronOne from "../components/JumbotronOne.astro";
         /> -->
       </ul>
       {false ?? <Testimonial />}
+      <span class="text-gray-200">Timeline:</span>
       <Timeline />
       <div class="flex justify-center">
         <JumbotronOne />
       </div>
+      <!-- <div class="flex flex-col md:w-1/2">
+        <span>Some cool websites I have found over the years...</span>
+        <a
+          href="/topics/websites"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+        >
+          More Unique Websites
+        </a>
+      </div> -->
     </section>
   </main>
 </Layout>

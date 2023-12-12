@@ -26,7 +26,21 @@ const { title } = Astro.props;
     ></script>
   </body>
   <footer>
-    <section>this is the footer</section>
+    <section>
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span>Origin Otter</span>
+        <ul class="flex flex-wrap items-center mt-3">
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </section>
   </footer>
 </html>
 <style is:global>
